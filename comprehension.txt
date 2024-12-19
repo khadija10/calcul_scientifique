@@ -1,0 +1,23 @@
+X = [0, 0.001, 0.002 ..., 3]
+step = 0001
+
+Etape 1: on écrit la formulation discrète de la dérivée
+
+f'(X[i]) = (f(X[i + 1]) - f(X[i])) / step
+
+Etape 2: On injecte la formulation discrète de la dérivée dans l'équation
+f'(X[i]) - f(X[i]) = 0
+f'(X[0]) = 1
+
+Etape 3: on isole f(X[i+1])
+
+
+f(X[i + 1]) = f(X[i]) * step + f(X[i])
+
+X = numpy.arrange(0, 3, step)
+F = f(X[0]) = [1]
+number_of_points = len(X)
+
+for index in range(0, number_of_points - 1):
+    next_value = F[index] * step + F[index]
+    F.append(next_value)

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 def f(x):
     return x**2 - 8 * numpy.log(x)
 
-
+# dichotomie
 def solve_equation (f, left, right, precision=10**(-3)):
 
     while right - left >= precision:
@@ -23,7 +23,7 @@ def plot_function(f, start, end, step):
     x = numpy.arange(start, end, step)
     y = f(x)
     plt.figure(figsize=(15, 6))
-    plt.plot(x, y)
+    plt.plot(x, y, 'o', color="pink")
     plt.show()
 
 if __name__ == "__main__":
